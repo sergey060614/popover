@@ -16,7 +16,7 @@ describe('Тестирование виджета Popover', () => {
     const popoverWidget = new Popover(button, { title: 'Заголовок', content: 'Текст' });
     popoverWidget.init();
     const popover = document.querySelector('.popover-container');
-    
+
     expect(popover).toBeNull();
   });
 
@@ -29,7 +29,7 @@ describe('Тестирование виджета Popover', () => {
     const popover = document.querySelector('.popover-container');
     expect(popover).not.toBeNull();
     expect(popover.classList.contains('active')).toBe(true);
-    
+
     expect(popover.querySelector('.popover-title').textContent).toBe('Проверка');
     expect(popover.querySelector('.popover-content').textContent).toBe('Тестовый текст');
   });
@@ -54,7 +54,7 @@ describe('Тестирование виджета Popover', () => {
 
     const blankSpace = document.getElementById('blank-space');
     blankSpace.click();
-    
+
     expect(document.querySelector('.popover-container')).toBeNull();
   });
 });

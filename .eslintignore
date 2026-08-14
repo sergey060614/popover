@@ -1,3 +1,2 @@
-dist
-coverage
-docwebpack.config.js
+dist/
+webpack.config.js

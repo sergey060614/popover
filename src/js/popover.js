@@ -20,7 +20,7 @@ export default class Popover {
   calculatePosition() {
     const rect = this.trigger.getBoundingClientRect();
     const { scrollX, scrollY } = window;
-    
+
     const popoverWidth = this.popoverContainer.offsetWidth;
     const popoverHeight = this.popoverContainer.offsetHeight;
 
@@ -56,7 +56,7 @@ export default class Popover {
     const coords = this.calculatePosition();
     this.popoverContainer.style.left = `${coords.left}px`;
     this.popoverContainer.style.top = `${coords.top}px`;
-    
+
     this.popoverContainer.classList.add('active');
     this.isShown = true;
   }
@@ -68,7 +68,7 @@ export default class Popover {
       this.popoverContainer.remove();
       this.popoverContainer = null;
     }
-    
+
     this.isShown = false;
   }
 
